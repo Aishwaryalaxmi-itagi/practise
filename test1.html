@@ -1,103 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
+	    <title>Practise website</title>
+        <style>
 
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: LightBlue;
-  width: 30%;
-  height: 300px;
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: lightblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
+  padding: 12px 16px;
+  
 }
 
-/* Style the buttons inside the tab */
-.tab button {
+.dropdown:hover .dropdown-content {
   display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 300px;
-  background-color: lightgreen;
-}
 </style>
 </head>
 <body>
-
-<h2>Basic html page</h2>
-
-
-<div class="tab">
-  <button class="tablinks" onclick="open(event, 'Company')" id="defaultOpen">Company</button>
-  <button class="tablinks" onclick="open(event, 'Employee')">Employee</button>
-  <button class="tablinks" onclick="open(event, 'Blog')">Blog</button>
+   <h1><center>Basic Website!</center></h1>
+   <div class="dropdown">
+  <center><button>Thinkitive technologies</button></center>
+  <div class="dropdown-content">
+  <p><center>Welcome!</center></p>
+  </div>
 </div>
-
-<div id="Company" class="tabcontent">
-  <h3>Company</h3>
-  <p>Thinkitive Technologies</p>
-</div>
-
-<div id="Employee" class="tabcontent">
-  <h3>Employees</h3>
-  <p>More than 130+ employes residing into the company!</p> 
-</div>
-
-<div id="Blog" class="tabcontent">
-  <h3>Blog</h3>
-  <p>We are software development services and products company. Over the last six years, we have gained expertise in applied engineering for domains such as the Internet of Things (IoT), Retail & E-Commerce, Telecom, Healthcare, Transportation & Logistics, and Media Advertising. Our in-depth knowledge of software development consulting, data science, IoT, and domain expertise helps us develop highly efficient, scalable, and easy-to-use applications using the latest cutting-edge technologies. Creativity is a core part of our technology services fabric. We aim to redefine technology creatively. </p>
-</div>
-
-<script>
-function open(evt, val) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(val).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
 </body>
-</html> 
-
-
+</html>
